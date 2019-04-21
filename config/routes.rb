@@ -3,6 +3,9 @@ Rails.application.routes.draw do
 
   root 'greeting#morning'
 
-  get 'greeting/night', to: 'greeting#night' 
+  get 'night', to: 'greeting#night' 
+  
+  # get 'greeting/night', to: 'greeting#night' 
 	
 end
+			
