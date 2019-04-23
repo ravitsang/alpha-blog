@@ -4,8 +4,10 @@ Rails.application.routes.draw do
   root 'greeting#morning'
 
   get 'night', to: 'greeting#night' 
+
+  resources :articles
   
   # get 'greeting/night', to: 'greeting#night' 
 	
-end
+end	
 			
