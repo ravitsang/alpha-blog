@@ -1,9 +1,9 @@
 Rails.application.routes.draw do
   # For details on the DSL available within this file, see http://guides.rubyonrails.org/routing.html
 
-  root 'greeting#morning'
+  root 'pages#home'
 
-  get 'night', to: 'greeting#night' 
+  get 'about', to: 'pages#about' 
 
   resources :articles
   
