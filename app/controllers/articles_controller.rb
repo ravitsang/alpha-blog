@@ -25,7 +25,7 @@ class ArticlesController < ApplicationController
 
   def update
     if @article.update(article_params)
-      flash[:success] = "Article was successfully updated"
+      flash[:success] = "Article was successfully updated" #hashes
       redirect_to article_path(@article)
     else
       render 'edit' #render to edit.html.erb
