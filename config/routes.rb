@@ -3,11 +3,14 @@ Rails.application.routes.draw do
 
   root 'pages#home'
 
-  get 'about', to: 'pages#about' 
+  get 'about', to: 'pages#about' #pages = controller about = view
+
 
   resources :articles
-  
-  # get 'greeting/night', to: 'greeting#night' 
-	
-end	
-			
+
+  # get 'greeting/night', to: 'greeting#night'
+
+  get 'signup', to: 'users#new' #signup = routes ,users = controller, users = view , new = view file
+  resources :users, except: [:new]
+
+end
