@@ -40,10 +40,13 @@ class UsersController < ApplicationController
   end
 
   def destroy
-    @user.destroy
-    flash[:danger] = "User and all articles created by user have been deleted"
+    if current_user != @user
+      @user.destroy
+      flash[:danger] = "User and all articles created by user have been deleted"
+    else
+      flash[:danger] = "You cant delete yourself!"
+    end
     redirect_to users_path
-
   end
 
   private
