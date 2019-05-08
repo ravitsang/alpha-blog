@@ -7,7 +7,7 @@ class ApplicationController < ActionController::Base
   end
 
   def logged_in?
-    !!current_user
+    !!current_user #convert the instants variable into boolean
   end
 
   def require_user
