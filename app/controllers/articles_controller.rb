@@ -50,7 +50,7 @@ class ArticlesController < ApplicationController
   end
 
   def article_params
-    params.require(:article).permit(:title, :description) # check the validation
+    params.require(:article).permit(:title, :description, category_ids: []) # check the validation
   end
 
   def require_same_user

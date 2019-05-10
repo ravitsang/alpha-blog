@@ -62,11 +62,18 @@ $navbar-default-bg:black;
 }
 
 .listing {
+  list-style: none;
+  padding-left: 0;
+}
+.badge {
+  background-color: #e5e5e5;
+  text-transform: uppercase;
+  letter-spacing: -1px;
+  font-weight: bold;
+}
 
-list-style: none;
-
-padding-left: 0;
-
+.input_checkbox input { 
+  width: auto !important;
 }
 
 footer {
